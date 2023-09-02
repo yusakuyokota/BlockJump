@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class WallController : MonoBehaviour
 {
     public enum Color
@@ -33,6 +33,7 @@ public class WallController : MonoBehaviour
                 {
                     Debug.Log("hai");
                     Destroy(other.gameObject);
+                    StartCoroutine(DestroyAction());
                 }
                
             }
@@ -42,9 +43,15 @@ public class WallController : MonoBehaviour
                 if (other.gameObject.CompareTag(WallRed))
                 {
                     Destroy(other.gameObject);
+                    StartCoroutine(DestroyAction());
                 }
              
             }
         }
+    }
+    private IEnumerator DestroyAction()
+    {
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene("gameover");
     }
 }
