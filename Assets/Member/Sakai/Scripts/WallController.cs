@@ -20,22 +20,26 @@ public class WallController : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-       
+        
         if (other.gameObject.name == "Block")
         {
+          
             if (color == Color.Red)
             {
-                if (this.gameObject.CompareTag(WallBlue))
+                
+                if (other.gameObject.CompareTag(WallBlue))
                 {
+                    Debug.Log("hai");
                     Destroy(other.gameObject);
                 }
                
             }
             if(color == Color.Blue)
             {
-                if (this.gameObject.CompareTag(WallRed))
+             
+                if (other.gameObject.CompareTag(WallRed))
                 {
                     Destroy(other.gameObject);
                 }
