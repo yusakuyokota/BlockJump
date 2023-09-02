@@ -5,7 +5,7 @@ using UnityEngine;
 public class RedBall : MonoBehaviour
 {
     // Start is called before the first frame update
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(UnityEngine.Collider2D other)
     {
         SpriteRenderer renderer = other.gameObject.GetComponent<SpriteRenderer>();
 
