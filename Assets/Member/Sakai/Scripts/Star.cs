@@ -11,9 +11,7 @@ public class Star : MonoBehaviour
         Star2,
         Star3
     }
-    // UI Textオブジェクトへの参照
-    public Image uiImage;
-    public Color collisionColor = Color.white; 
+   
     [SerializeField]
     private StarCount starcount;
     // Start is called before the first frame update
@@ -26,6 +24,7 @@ public class Star : MonoBehaviour
     {
         if(starcount == StarCount.Star1)
         {
+            
           Star1true.enabled = true;
         }
         if (starcount == StarCount.Star2)
