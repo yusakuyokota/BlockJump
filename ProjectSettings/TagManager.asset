@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Red
   - Blue
+  - RightWall
+  - Ceiling
+  - Ground
+  - LeftWall
   layers:
   - Default
   - TransparentFX

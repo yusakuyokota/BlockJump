@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class Goal : MonoBehaviour
 {
@@ -24,8 +23,8 @@ public class Goal : MonoBehaviour
     }
     private IEnumerator DelayedAction()
     {
-
         yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadScene("clear");
+
+        StartCoroutine(FadeManager.Instance.FadeIn(() => SceneManager.LoadScene("Clear")));
     }
 }

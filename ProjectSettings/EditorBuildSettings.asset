@@ -9,15 +9,15 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Member/Sakai/Scene/Clear.unity
-    guid: 68c31244cd7beec4281eef0adf6a985c
+    path: Assets/Member/Sakai/Scene/title.unity
+    guid: 1f461f33e3061b14bab75ea9f578229a
   - enabled: 1
     path: Assets/Member/Sakai/Scene/game.unity
     guid: cd92860f86d22e74faced39f03912fb5
   - enabled: 1
-    path: Assets/Member/Sakai/Scene/title.unity
-    guid: 1f461f33e3061b14bab75ea9f578229a
-  - enabled: 1
     path: Assets/Member/Sakai/Scene/gameover.unity
     guid: 402586d29170f82489a392c0953cac4f
+  - enabled: 1
+    path: Assets/Member/Sakai/Scene/Clear.unity
+    guid: 68c31244cd7beec4281eef0adf6a985c
   m_configObjects: {}

@@ -31,7 +31,6 @@ public class WallController : MonoBehaviour
                 
                 if (other.gameObject.CompareTag(WallBlue))
                 {
-                    Debug.Log("hai");
                     Destroy(other.gameObject);
                     StartCoroutine(DestroyAction());
                 }
@@ -52,6 +51,6 @@ public class WallController : MonoBehaviour
     private IEnumerator DestroyAction()
     {
         yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadScene("gameover");
+        StartCoroutine(FadeManager.Instance.FadeIn(() => SceneManager.LoadScene("gameover")));
     }
 }
